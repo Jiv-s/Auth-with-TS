@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node dist/index",
     "build": "tsx -p .",
-    "dev": "tsc-watch --onSucess \"node dist/index\" "
+    "dev": "tsc-watch --onSuccess \"node dist/index\" "
   },
   "keywords": [],
   "author": "",
@@ -20,6 +20,11 @@
   },
   "type": "module",
   "devDependencies": {
+    "@types/express": "^5.0.6",
+    "@types/node": "^25.9.1",
     "tsc-watch": "^7.2.0"
+  },
+  "dependencies": {
+    "express": "^5.2.1"
   }
 }

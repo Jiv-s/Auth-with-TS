@@ -1,0 +1,25 @@
+{
+  "name": "piyush_sir",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node dist/index",
+    "build": "tsx -p .",
+    "dev": "tsc-watch --onSucess \"node dist/index\" "
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devEngines": {
+    "packageManager": {
+      "name": "pnpm",
+      "version": "^11.1.3",
+      "onFail": "download"
+    }
+  },
+  "type": "module",
+  "devDependencies": {
+    "tsc-watch": "^7.2.0"
+  }
+}

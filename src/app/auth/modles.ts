@@ -6,3 +6,8 @@ export const signupPayload = z.object({
     email:z.email(),
     password:z.string().min(8)
 })
+
+export const signinPayload = z.object({
+    email:z.email(),
+    password:z.string().min(8)
+})

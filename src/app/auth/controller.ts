@@ -5,6 +5,7 @@ import {db} from "../../db/index.js";
 import { userTable } from "../../db/schema.js";
 import { eq } from "drizzle-orm";
 import { createHmac, randomBytes } from "node:crypto";
+import { generateToken } from './utils/token.js';
 
 
 export class authenticationController {
@@ -48,7 +49,8 @@ export class authenticationController {
         const hash = createHmac('sha256',salt).update(password).digest('hex')
         if(validEmail.password !== hash) return res.status(400).json({message:"invalid login creds"})
         
-        return res.status(200).json({message:"user login in succesfully",data:{token:1}})
+        const token = generateToken({ id: validEmail.id });
+        return res.status(200).json({message:"user login in succesfully",data:{token}})
         
 
 
